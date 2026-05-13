@@ -10,9 +10,7 @@ const services = [
 
 const company = [
   { label: "About Us", path: "/" },
-  { label: "How It Works", path: "/" },
-  { label: "Testimonials", path: "/" },
-  { label: "Contact", path: "/" },
+  { label: "Contact", path: "/get-started" },
 ];
 
 const legal = [
