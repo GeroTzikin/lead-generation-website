@@ -16,9 +16,8 @@ const company = [
 ];
 
 const legal = [
-  { label: "Privacy Policy", path: "/" },
-  { label: "Terms of Service", path: "/" },
-  { label: "Cookie Policy", path: "/" },
+ { label: "Terms of Use", path: "/terms-of-use" },
+{ label: "Cookie Policy", path: "/" },
 ];
 
 export function Footer() {
