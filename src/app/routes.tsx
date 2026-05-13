@@ -6,6 +6,7 @@ import { CarWarranty } from "./pages/CarWarranty";
 import { Mortgage } from "./pages/Mortgage";
 import { HomeWarranty } from "./pages/HomeWarranty";
 import { GetStarted } from "./pages/GetStarted";
+import { TermsOfUse } from "./pages/TermsOfUse";
 
 function NotFound() {
   return (
@@ -37,6 +38,7 @@ export const router = createBrowserRouter([
       { path: "car-warranty", Component: CarWarranty },
       { path: "mortgage", Component: Mortgage },
       { path: "home-warranty", Component: HomeWarranty },
+      { path: "terms-of-use", Component: TermsOfUse },
       { path: "*", Component: NotFound },
     ],
   },
