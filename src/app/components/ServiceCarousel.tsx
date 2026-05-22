@@ -15,7 +15,7 @@ const services = [
       "https://images.unsplash.com/photo-1758518730384-be3d205838e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
     badge: "Up to $100K",
     path: "/personal-loan",
-    accent: "#f5a800",
+    accent: "#1d9bf0",
   },
   {
     id: "car-warranty",
@@ -27,7 +27,7 @@ const services = [
       "https://images.unsplash.com/photo-1773793339059-a7d2237966bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
     badge: "Full Coverage",
     path: "/car-warranty",
-    accent: "#f5a800",
+    accent: "#1d9bf0",
   },
   {
     id: "mortgage",
@@ -39,7 +39,7 @@ const services = [
       "https://images.unsplash.com/photo-1741156386380-0236c72eb6f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
     badge: "Low Rates",
     path: "/mortgage",
-    accent: "#f5a800",
+    accent: "#1d9bf0",
   },
   {
     id: "home-warranty",
@@ -51,7 +51,7 @@ const services = [
       "https://images.unsplash.com/photo-1758227365187-016878604d94?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
     badge: "Total Protection",
     path: "/home-warranty",
-    accent: "#f5a800",
+    accent: "#1d9bf0",
   },
 ];
 
@@ -102,7 +102,7 @@ export function ServiceCarousel() {
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
-          {/* Yellow glow behind active card */}
+          {/* Blue glow behind active card */}
           <div
             style={{
               position: "absolute",
@@ -112,7 +112,7 @@ export function ServiceCarousel() {
               width: "420px",
               height: "340px",
               borderRadius: "40px",
-              background: "radial-gradient(ellipse at center, rgba(245,168,0,0.38) 0%, rgba(245,168,0,0.10) 55%, transparent 80%)",
+              background: "radial-gradient(ellipse at center, rgba(29,155,240,0.38) 0%, rgba(29,155,240,0.10) 55%, transparent 80%)",
               filter: "blur(32px)",
               pointerEvents: "none",
               zIndex: 1,
@@ -190,7 +190,7 @@ export function ServiceCarousel() {
                   style={{
                     pointerEvents: isActive ? "auto" : "none",
                     boxShadow: isActive
-                      ? "0 32px 80px rgba(15,32,68,0.18), 0 0 0 1px rgba(245,168,0,0.12)"
+                      ? "0 32px 80px rgba(15,32,68,0.18), 0 0 0 1px rgba(29,155,240,0.18)"
                       : "0 8px 32px rgba(15,32,68,0.12)",
                   }}
                   tabIndex={isActive ? 0 : -1}
@@ -261,7 +261,7 @@ export function ServiceCarousel() {
                   width: i === active ? "28px" : "8px",
                   height: "8px",
                   borderRadius: "99px",
-                  background: i === active ? "#f5a800" : "rgba(15,32,68,0.2)",
+                  background: i === active ? "#1d9bf0" : "rgba(15,32,68,0.2)",
                   transition: "all 0.35s cubic-bezier(0.34,1.56,0.64,1)",
                   border: "none",
                   cursor: "pointer",
@@ -288,7 +288,7 @@ export function ServiceCarousel() {
             <motion.div
               key={active}
               className="absolute left-0 top-0 h-full rounded-full"
-              style={{ background: "#f5a800" }}
+              style={{ background: "#1d9bf0" }}
               initial={{ width: "0%" }}
               animate={{ width: "100%" }}
               transition={{ duration: paused ? 0 : 3.5, ease: "linear" }}

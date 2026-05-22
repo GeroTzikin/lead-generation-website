@@ -50,7 +50,7 @@ export function Navbar() {
               className="hidden sm:block transition-colors duration-300"
               style={{ fontSize: "17px", fontWeight: 700, letterSpacing: "-0.01em", color: scrolled ? "#0f2044" : "white" }}
             >
-              ConvertX <span style={{ color: "#f5a800" }}>Lead Generation</span>
+              ConvertX <span style={{ color: "#1d9bf0" }}>Lead Generation</span>
             </span>
           </div>
         </Link>
@@ -82,8 +82,8 @@ export function Navbar() {
             to="/get-started"
             className="text-sm px-5 py-2 rounded-full transition-all duration-200"
             style={{
-              background: scrolled ? "#f5a800" : "#f5a800",
-              color: "#0f2044",
+              background: scrolled ? "#1d9bf0" : "#1d9bf0",
+              color: "#ffffff",
               fontWeight: 600,
             }}
           >
@@ -129,7 +129,7 @@ export function Navbar() {
             <Link
               to="/get-started"
               className="mt-4 text-sm px-5 py-3 rounded-full text-center"
-              style={{ background: "#f5a800", color: "#0f2044", fontWeight: 600 }}
+              style={{ background: "#1d9bf0", color: "#ffffff", fontWeight: 600 }}
             >
               Get Started
             </Link>
