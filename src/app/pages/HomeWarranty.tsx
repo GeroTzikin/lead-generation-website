@@ -71,7 +71,7 @@ export function HomeWarranty() {
           >
             Protect your home,
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-amber-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-blue-400">
               protect your wallet.
             </span>
           </h1>
@@ -94,7 +94,7 @@ export function HomeWarranty() {
             {benefits.map((b) => (
               <div key={b.text} className="flex items-center gap-4 bg-[#f5f5f7] rounded-2xl p-5">
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: "#0f2044" }}>
-                  <span style={{ color: "#f5a800" }}>{b.icon}</span>
+                  <span style={{ color: "#1d9bf0" }}>{b.icon}</span>
                 </div>
                 <span className="text-sm text-black/70">{b.text}</span>
               </div>
@@ -120,7 +120,7 @@ export function HomeWarranty() {
                 {plan.highlight && (
                   <div
                     className="absolute -top-3 left-1/2 -translate-x-1/2 text-xs px-4 py-1 rounded-full shadow"
-                    style={{ background: "#f5a800", color: "#0f2044", fontWeight: 700 }}
+                    style={{ background: "#1d9bf0", color: "#ffffff", fontWeight: 700 }}
                   >
                     Best Value
                   </div>
@@ -137,7 +137,7 @@ export function HomeWarranty() {
                 <ul className="flex flex-col gap-2.5">
                   {plan.items.map((item) => (
                     <li key={item} className="flex items-center gap-2 text-sm">
-                      <CheckCircle size={14} style={{ color: plan.highlight ? "#f5a800" : "#0f2044" }} />
+                      <CheckCircle size={14} style={{ color: plan.highlight ? "#1d9bf0" : "#0f2044" }} />
                       <span className={plan.highlight ? "text-white/80" : "text-black/70"}>{item}</span>
                     </li>
                   ))}
@@ -159,7 +159,7 @@ export function HomeWarranty() {
           </h2>
           <div className="flex flex-col gap-4">
             {faqs.map((faq) => (
-              <div key={faq.q} className="bg-[#f5f5f7] rounded-2xl p-6 border-l-4" style={{ borderColor: "#f5a800" }}>
+              <div key={faq.q} className="bg-[#f5f5f7] rounded-2xl p-6 border-l-4" style={{ borderColor: "#1d9bf0" }}>
                 <h4 className="mb-2" style={{ fontSize: "16px", fontWeight: 600, color: "#0f2044" }}>{faq.q}</h4>
                 <p className="text-black/50 text-sm leading-relaxed">{faq.a}</p>
               </div>

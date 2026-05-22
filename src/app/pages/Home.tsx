@@ -133,8 +133,8 @@ function ServiceCard({ service }: { service: typeof services[number] }) {
           className="inline-flex items-center gap-2 text-sm px-5 py-2.5 rounded-full transition-all duration-300"
           style={{
             fontWeight: 600,
-            background: hovered ? "#f5a800" : "#0f2044",
-            color: hovered ? "#0f2044" : "white",
+            background: hovered ? "#1d9bf0" : "#0f2044",
+            color: "white",
             transform: hovered ? "translateX(4px)" : "translateX(0)",
           }}
         >
@@ -179,7 +179,7 @@ export function Home() {
           >
             Your financial future,
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-amber-300 to-yellow-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-blue-300 to-sky-400">
               simplified.
             </span>
           </h1>
@@ -195,7 +195,7 @@ export function Home() {
             <Link
               to="/get-started"
               className="text-sm px-8 py-4 rounded-full flex items-center gap-2 transition-all duration-200"
-              style={{ background: "#f5a800", color: "#0f2044", fontWeight: 600 }}
+              style={{ background: "#1d9bf0", color: "#ffffff", fontWeight: 600 }}
             >
               Get Started Free <ArrowRight size={16} />
             </Link>
@@ -251,7 +251,7 @@ export function Home() {
             {features.map((feature) => (
               <div key={feature.title} className="text-center">
                 <div className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{ background: "#ffffff" }}>
-                  <span style={{ color: "#f5a800" }}>{feature.icon}</span>
+                  <span style={{ color: "#1d9bf0" }}>{feature.icon}</span>
                 </div>
                 <h4
                   className="text-white mb-2"

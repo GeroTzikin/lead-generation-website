@@ -228,7 +228,7 @@ export function GetStarted() {
           style={{ fontSize: "clamp(32px, 5vw, 56px)", fontWeight: 700, letterSpacing: "-0.03em", lineHeight: 1.08 }}
         >
           Find your{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-amber-400">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-blue-400">
             perfect plan.
           </span>
         </h1>
@@ -434,11 +434,11 @@ export function GetStarted() {
                     >
                       <span className="text-black/80" style={{ fontWeight: 500 }}>I agree to the Terms & Conditions.</span>
                       {" "}By submitting this form I confirm I have read and accept the{" "}
-                      <a href="#" className="underline hover:opacity-70 transition-opacity" style={{ color: "#f5a800" }}>
+                      <a href="#" className="underline hover:opacity-70 transition-opacity" style={{ color: "#1d9bf0" }}>
                         Terms & Conditions
                       </a>{" "}
                       and{" "}
-                      <a href="#" className="underline hover:opacity-70 transition-opacity" style={{ color: "#f5a800" }}>
+                      <a href="#" className="underline hover:opacity-70 transition-opacity" style={{ color: "#1d9bf0" }}>
                         Privacy Policy
                       </a>. <span className="text-red-400">*</span>
                     </label>

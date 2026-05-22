@@ -36,7 +36,7 @@ const styles: Record<string, React.CSSProperties> = {
     textDecoration: "none",
   },
   btnCta: {
-    background: "#F5A825",
+    background: "#1d9bf0",
     color: "#fff",
     fontWeight: 700,
     padding: "10px 22px",
@@ -56,7 +56,7 @@ const styles: Record<string, React.CSSProperties> = {
     fontSize: "0.8rem",
     letterSpacing: "0.12em",
     textTransform: "uppercase",
-    color: "#F5A825",
+    color: "#1d9bf0",
     marginBottom: 14,
   },
   heroH1: {
@@ -87,7 +87,7 @@ const styles: Record<string, React.CSSProperties> = {
     marginTop: 40,
     marginBottom: 12,
     paddingBottom: 6,
-    borderBottom: "2px solid #F5A825",
+    borderBottom: "2px solid #1d9bf0",
     display: "inline-block",
   },
   p: {
@@ -104,7 +104,7 @@ const styles: Record<string, React.CSSProperties> = {
     lineHeight: 1.65,
   },
   link: {
-    color: "#F5A825",
+    color: "#1d9bf0",
     textDecoration: "none",
   },
 
@@ -174,9 +174,9 @@ const LogoIcon = () => (
     <rect width="36" height="36" rx="8" fill="#0c1c3a" />
     <path
       d="M10 18C10 13.58 13.58 10 18 10C20.5 10 22.75 11.12 24.28 12.9L26.7 10.48C24.56 8.33 21.43 7 18 7C11.92 7 7 11.92 7 18C7 24.08 11.92 29 18 29C21.43 29 24.56 27.67 26.7 25.52L24.28 23.1C22.75 24.88 20.5 26 18 26C13.58 26 10 22.42 10 18Z"
-      fill="#F5A825"
+      fill="#1d9bf0"
     />
-    <path d="M22 18L18 14V17H13V19H18V22L22 18Z" fill="#F5A825" />
+    <path d="M22 18L18 14V17H13V19H18V22L22 18Z" fill="#1d9bf0" />
   </svg>
 );
 
@@ -196,7 +196,7 @@ export function TermsOfUse() {
           <LogoIcon />
           <span>
             <span style={{ color: "#1a1a2e" }}>ConvertX </span>
-            <span style={{ color: "#F5A825" }}>Lead Generation</span>
+            <span style={{ color: "#1d9bf0" }}>Lead Generation</span>
           </span>
         </a>
         <nav style={styles.nav}>
@@ -461,7 +461,7 @@ export function TermsOfUse() {
               <LogoIcon />
               <span>
                 <span style={{ color: "#fff" }}>ConvertX </span>
-                <span style={{ color: "#F5A825" }}>Lead Generation</span>
+                <span style={{ color: "#1d9bf0" }}>Lead Generation</span>
               </span>
             </a>
             <p style={styles.footerBrandText}>

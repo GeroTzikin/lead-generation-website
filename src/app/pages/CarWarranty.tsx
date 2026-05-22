@@ -46,7 +46,7 @@ export function CarWarranty() {
           >
             Drive worry-free,
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-amber-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-blue-400">
               every mile.
             </span>
           </h1>
@@ -69,7 +69,7 @@ export function CarWarranty() {
             {benefits.map((b) => (
               <div key={b.text} className="flex items-center gap-4 bg-[#f5f5f7] rounded-2xl p-5">
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: "#0f2044" }}>
-                  <span style={{ color: "#f5a800" }}>{b.icon}</span>
+                  <span style={{ color: "#1d9bf0" }}>{b.icon}</span>
                 </div>
                 <span className="text-sm text-black/70">{b.text}</span>
               </div>
@@ -114,7 +114,7 @@ export function CarWarranty() {
                 style={tier.highlight ? { background: "#0f2044" } : {}}
               >
                 {tier.highlight && (
-                  <div className="text-xs uppercase tracking-widest mb-1" style={{ color: "#f5a800" }}>Most Popular</div>
+                  <div className="text-xs uppercase tracking-widest mb-1" style={{ color: "#1d9bf0" }}>Most Popular</div>
                 )}
                 <h3 className={`mb-1 ${tier.highlight ? "text-white" : "text-black"}`} style={{ fontSize: "20px", fontWeight: 600 }}>
                   {tier.name}
@@ -124,7 +124,7 @@ export function CarWarranty() {
                 <ul className="flex flex-col gap-2">
                   {tier.items.map((item) => (
                     <li key={item} className="flex items-center gap-2 text-sm">
-                      <CheckCircle size={14} style={{ color: tier.highlight ? "#f5a800" : "#0f2044" }} />
+                      <CheckCircle size={14} style={{ color: tier.highlight ? "#1d9bf0" : "#0f2044" }} />
                       <span className={tier.highlight ? "text-white/80" : "text-black/70"}>{item}</span>
                     </li>
                   ))}
@@ -146,7 +146,7 @@ export function CarWarranty() {
           </h2>
           <div className="flex flex-col gap-4">
             {faqs.map((faq) => (
-              <div key={faq.q} className="bg-[#f5f5f7] rounded-2xl p-6 border-l-4" style={{ borderColor: "#f5a800" }}>
+              <div key={faq.q} className="bg-[#f5f5f7] rounded-2xl p-6 border-l-4" style={{ borderColor: "#1d9bf0" }}>
                 <h4 className="mb-2" style={{ fontSize: "16px", fontWeight: 600, color: "#0f2044" }}>{faq.q}</h4>
                 <p className="text-black/50 text-sm leading-relaxed">{faq.a}</p>
               </div>

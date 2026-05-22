@@ -46,7 +46,7 @@ export function PersonalLoan() {
           >
             Get the funds
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-amber-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-blue-400">
               you deserve.
             </span>
           </h1>
@@ -69,7 +69,7 @@ export function PersonalLoan() {
             {benefits.map((b) => (
               <div key={b.text} className="flex items-center gap-4 bg-[#f5f5f7] rounded-2xl p-5">
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: "#0f2044" }}>
-                  <span style={{ color: "#f5a800" }}>{b.icon}</span>
+                  <span style={{ color: "#1d9bf0" }}>{b.icon}</span>
                 </div>
                 <span className="text-sm text-black/70">{b.text}</span>
               </div>
@@ -86,7 +86,7 @@ export function PersonalLoan() {
           </h2>
           <div className="flex flex-col gap-4">
             {faqs.map((faq) => (
-              <div key={faq.q} className="bg-white rounded-2xl p-6 border-l-4" style={{ borderColor: "#f5a800" }}>
+              <div key={faq.q} className="bg-white rounded-2xl p-6 border-l-4" style={{ borderColor: "#1d9bf0" }}>
                 <h4 className="mb-2" style={{ fontSize: "16px", fontWeight: 600, color: "#0f2044" }}>{faq.q}</h4>
                 <p className="text-black/50 text-sm leading-relaxed">{faq.a}</p>
               </div>
