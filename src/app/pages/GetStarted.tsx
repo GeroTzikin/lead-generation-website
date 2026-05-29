@@ -98,6 +98,16 @@ const serviceAccent: Record<string, string> = {
   "Home Warranty": "#0f2044",
 };
 
+// ─── TCPA SMS consent disclosures ──────────────────────────────────────────────
+// Exact wording shown beside each checkbox. Kept as constants so the same text
+// can be stored with the lead as documented proof of consent (TCPA record-keeping).
+
+const MARKETING_SMS_CONSENT =
+  "Marketing text messages (optional). I agree to receive recurring automated marketing and promotional text messages (offers, deals, and tips) from ConvertX Lead Generation at the phone number provided. Consent is not a condition of any purchase or service. Message frequency varies. Msg & data rates may apply. Reply STOP to unsubscribe, HELP for help. See our Terms & Conditions and Privacy Policy.";
+
+const ACCOUNT_NOTIFICATIONS_CONSENT =
+  "Account notifications (optional). I agree to receive automated text messages from ConvertX Lead Generation about my request, application status, and account updates at the phone number provided. Message frequency varies. Msg & data rates may apply. Reply STOP to opt out, HELP for help.";
+
 // ─── Custom Checkbox ───────────────────────────────────────────────────────────
 
 function CustomCheckbox({
@@ -138,7 +148,9 @@ function CustomCheckbox({
 
 export function GetStarted() {
   const [selectedService, setSelectedService] = useState("");
-  const [optIn, setOptIn] = useState(false);
+  // SMS opt-ins — both optional, both unchecked by default (required for TCPA express consent).
+  const [marketingSms, setMarketingSms] = useState(false);
+  const [accountNotifications, setAccountNotifications] = useState(false);
   const [termsAccepted, setTermsAccepted] = useState(false);
   const [termsError, setTermsError] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -154,13 +166,35 @@ export function GetStarted() {
     reset,
   } = useForm();
 
-  const onSubmit = async () => {
+  const onSubmit = async (data: Record<string, any>) => {
     if (!termsAccepted) {
       setTermsError(true);
       return;
     }
     setTermsError(false);
     setLoading(true);
+
+    // TCPA record-keeping: capture which SMS consents were granted, the exact
+    // disclosure text shown, the consenting phone number, and a timestamp.
+    // Wire `submission` to your backend/CRM to persist proof of consent (retain ≥ 5 years).
+    const submission = {
+      ...data,
+      smsConsent: {
+        marketing: {
+          granted: marketingSms,
+          disclosure: marketingSms ? MARKETING_SMS_CONSENT : null,
+        },
+        accountNotifications: {
+          granted: accountNotifications,
+          disclosure: accountNotifications ? ACCOUNT_NOTIFICATIONS_CONSENT : null,
+        },
+        phone: data.phone ?? null,
+        capturedAt: new Date().toISOString(),
+      },
+      termsAccepted,
+    };
+    console.log("ConvertX lead submission", submission);
+
     await new Promise((r) => setTimeout(r, 1500));
     setLoading(false);
     setSubmitted(true);
@@ -169,7 +203,8 @@ export function GetStarted() {
   const handleReset = () => {
     setSubmitted(false);
     setSelectedService("");
-    setOptIn(false);
+    setMarketingSms(false);
+    setAccountNotifications(false);
     setTermsAccepted(false);
     setTermsError(false);
     reset();
@@ -397,17 +432,40 @@ export function GetStarted() {
               {/* ── Divider ── */}
               <div className="border-t pt-6 mt-1 flex flex-col gap-4" style={{ borderColor: "rgba(0,0,0,0.07)" }}>
 
-                {/* ── Opt-in Checkbox ── */}
+                {/* ── Marketing SMS Opt-in (optional · TCPA express written consent) ── */}
                 <div className="flex items-start gap-3">
                   <CustomCheckbox
-                    id="optIn"
-                    checked={optIn}
-                    onChange={setOptIn}
+                    id="marketingSms"
+                    checked={marketingSms}
+                    onChange={setMarketingSms}
                     accentColor={accentColor}
                   />
-                  <label htmlFor="optIn" className="text-sm text-black/60 leading-relaxed cursor-pointer select-none" onClick={() => setOptIn(!optIn)}>
-                    <span className="text-black/80" style={{ fontWeight: 500 }}>Yes, I'd like to receive updates.</span>
-                    {" "}I agree to receive personalised offers, tips, and promotions from ConvertX Lead Generation via email and SMS. You can opt out at any time.
+                  <label htmlFor="marketingSms" className="text-sm text-black/60 leading-relaxed cursor-pointer select-none" onClick={() => setMarketingSms(!marketingSms)}>
+                    <span className="text-black/80" style={{ fontWeight: 500 }}>Marketing text messages.</span>
+                    <span className="text-black/30"> (optional)</span>
+                    {" "}I agree to receive recurring automated marketing &amp; promotional text messages (offers, deals, and tips) from ConvertX Lead Generation at the phone number provided. Consent is not a condition of any purchase or service. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to unsubscribe, HELP for help. See our{" "}
+                    <Link to="/terms-of-use" className="underline hover:opacity-70 transition-opacity" style={{ color: "#1d9bf0" }} onClick={(e) => e.stopPropagation()}>
+                      Terms &amp; Conditions
+                    </Link>{" "}
+                    and{" "}
+                    <a href="#" className="underline hover:opacity-70 transition-opacity" style={{ color: "#1d9bf0" }} onClick={(e) => e.stopPropagation()}>
+                      Privacy Policy
+                    </a>.
+                  </label>
+                </div>
+
+                {/* ── Account Notifications SMS Opt-in (optional · TCPA) ── */}
+                <div className="flex items-start gap-3">
+                  <CustomCheckbox
+                    id="accountNotifications"
+                    checked={accountNotifications}
+                    onChange={setAccountNotifications}
+                    accentColor={accentColor}
+                  />
+                  <label htmlFor="accountNotifications" className="text-sm text-black/60 leading-relaxed cursor-pointer select-none" onClick={() => setAccountNotifications(!accountNotifications)}>
+                    <span className="text-black/80" style={{ fontWeight: 500 }}>Account notifications.</span>
+                    <span className="text-black/30"> (optional)</span>
+                    {" "}I agree to receive automated text messages from ConvertX Lead Generation about my request, application status, and account updates at the phone number provided. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help.
                   </label>
                 </div>
 
