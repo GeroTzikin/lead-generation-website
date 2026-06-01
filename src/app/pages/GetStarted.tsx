@@ -444,11 +444,11 @@ export function GetStarted() {
                     <span className="text-black/80" style={{ fontWeight: 500 }}>Marketing text messages.</span>
                     <span className="text-black/30"> (optional)</span>
                     {" "}I agree to receive recurring automated marketing &amp; promotional text messages (offers, deals, and tips) from ConvertX Lead Generation at the phone number provided. Consent is not a condition of any purchase or service. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to unsubscribe, HELP for help. See our{" "}
-                    <Link to="/terms-of-use" className="underline hover:opacity-70 transition-opacity" style={{ color: "#1d9bf0" }} onClick={(e) => e.stopPropagation()}>
+                    <Link to="/terms-of-use" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70 transition-opacity" style={{ color: "#1d9bf0" }} onClick={(e) => e.stopPropagation()}>
                       Terms &amp; Conditions
                     </Link>{" "}
                     and{" "}
-                    <a href="#" className="underline hover:opacity-70 transition-opacity" style={{ color: "#1d9bf0" }} onClick={(e) => e.stopPropagation()}>
+                    <a href="/terms-of-use" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70 transition-opacity" style={{ color: "#1d9bf0" }} onClick={(e) => e.stopPropagation()}>
                       Privacy Policy
                     </a>.
                   </label>
@@ -492,11 +492,11 @@ export function GetStarted() {
                     >
                       <span className="text-black/80" style={{ fontWeight: 500 }}>I agree to the Terms & Conditions.</span>
                       {" "}By submitting this form I confirm I have read and accept the{" "}
-                      <a href="#" className="underline hover:opacity-70 transition-opacity" style={{ color: "#1d9bf0" }}>
+                      <a href="/terms-of-use" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70 transition-opacity" style={{ color: "#1d9bf0" }}>
                         Terms & Conditions
                       </a>{" "}
                       and{" "}
-                      <a href="#" className="underline hover:opacity-70 transition-opacity" style={{ color: "#1d9bf0" }}>
+                      <a href="/terms-of-use" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70 transition-opacity" style={{ color: "#1d9bf0" }}>
                         Privacy Policy
                       </a>. <span className="text-red-400">*</span>
                     </label>
