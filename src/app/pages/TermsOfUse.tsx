@@ -435,7 +435,7 @@ export function TermsOfUse() {
           </li>
           <li style={styles.li}>
             Customer shall inform ConvertX at{" "}
-            <a href="mailto:security@convertx.com" style={styles.link}>security@convertx.com</a>{" "}
+            <a href="mailto:info@convertx.today" style={styles.link}>info@convertx.today</a>{" "}
             within twenty-four (24) hours of becoming aware of any breach or security incident involving the Cloud Communication Service.
           </li>
           <li style={styles.li}>
