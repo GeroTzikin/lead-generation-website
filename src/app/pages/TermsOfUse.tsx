@@ -273,8 +273,8 @@ export function TermsOfUse() {
         </p>
         <p style={styles.p}>
           If you are unsatisfied with our services, please email us at{" "}
-          <a href="mailto:info@convertx.today" style={styles.link}>info@convertx.today</a>{" "}
-          or call us at +1 503 352-7860.
+          <a href="mailto:info@convertx.today" style={styles.link}>info@convertx.today</a>.
+          
         </p>
 
         <SectionTitle>Prohibited Activities</SectionTitle>
