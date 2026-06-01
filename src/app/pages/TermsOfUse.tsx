@@ -268,12 +268,12 @@ export function TermsOfUse() {
         <SectionTitle>Cancellation</SectionTitle>
         <p style={styles.p}>
           All purchases are non-refundable. You can cancel your subscription at any time by managing your plan in account settings or by contacting{" "}
-          <a href="mailto:noc@convertx.com" style={styles.link}>noc@convertx.com</a>.
+          <a href="mailto:info@convertx.today" style={styles.link}>info@convertx.today</a>.
           Your cancellation will take effect at the end of the current paid term.
         </p>
         <p style={styles.p}>
           If you are unsatisfied with our services, please email us at{" "}
-          <a href="mailto:sales@convertx.com" style={styles.link}>sales@convertx.com</a>{" "}
+          <a href="mailto:info@convertx.today" style={styles.link}>info@convertx.today</a>{" "}
           or call us at +1 503 352-7860.
         </p>
 
